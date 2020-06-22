@@ -349,3 +349,16 @@ template {
 [hidden] {
   display: none;
 }
+
+// personal reset
+
+*,
+fieldset {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-style: unset;
+}
