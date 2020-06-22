@@ -1,0 +1,17 @@
+.page {
+  &__header {
+    background-color: $colorLight;
+    height: 110px;
+    display: flex;
+    flex: row;
+    justify-content: flex-start;
+    align-items: center;
+    &__logo {
+      padding: 0 40px;
+      img {
+        height: 50px;
+        width: 201px;
+      }
+    }
+  }
+}
