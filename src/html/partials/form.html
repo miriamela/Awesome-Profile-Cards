@@ -1,10 +1,10 @@
-<form class="form" action="#" method="GET">
+<form class="page_g_form" action="#" method="GET">
   <div>
     <i class="far fa-object-ungroup"></i>
     <h2>Diseña</h2>
     <button><i class="fas fa-angle-down"></i></button>
   </div>
-  <fieldset class="form__design">
+  <fieldset class="page__form__design">
     <legend>
       Colores
     </legend>
@@ -23,31 +23,38 @@
     <h2>Rellena</h2>
     <button><i class="fas fa-angle-down"></i></button>
   </div>
-  <fieldset class="form__fill">
-    <label for="">
-      <input type="text" placeholder="Ej: Sally Jill" />
+  <fieldset class="page__form__fill">
+    <label for="firstName">
+      <input id="firstName" type="text" placeholder="Ej: Sally Jill" />
     </label>
-    <label for="">
-      <input type="text" placeholder="Ej: Front-end unicorn" />
+    <label for="work">
+      <input id="work" type="text" placeholder="Ej: Front-end unicorn" />
     </label>
     <button>Añadir imagen</button>
-    <label for="">
-      <input type="email" placeholder="Ej: sally-hill@gmail.com" />
+    <label for="email">
+      <input id="email" type="email" placeholder="Ej: sally-hill@gmail.com" />
     </label>
-    <label for="">
-      <input type="tel" placeholder="Ej: 555-55-55-55" />
+    <label for="telephone">
+      <input id="telephone" type="tel" placeholder="Ej: 555-55-55-55" />
     </label>
-    <label for="">
-      <input type="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+    <label for="linkedin">
+      <input id="linkedin" type="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
     </label>
-    <label for="">
-      <input type="github" placeholder="Ej: @sally-hill" />
+    <label for="github">
+      <input id="github" type="github" placeholder="Ej: @sally-hill" />
     </label>
   </fieldset>
   <div>
     <i class="fas fa-share-alt"></i>
     <h2>Comparte</h2>
-    <button><img src="" alt="" /></button>
+    <button><i class="fas fa-angle-down"></button>
   </div>
-  <fieldset class="form__share"></fieldset>
+  <fieldset class="page__form__share">
+    <input type="submit" value="crear tarjeta">  
+  </fieldset>
+  <div>
+      <h4>La tarjeta ha sido creada</h4>
+      <p>Esto es el link de la tarjeta</p>
+      <button>compartir en twitter</button>
+  </div>    
 </form>
