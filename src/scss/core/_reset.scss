@@ -362,3 +362,12 @@ fieldset {
   box-sizing: border-box;
   border-style: unset;
 }
+
+.wrapper {
+  padding: 20px;
+  margin: auto;
+
+  @include tablet {
+    padding: 40px;
+  }
+}
