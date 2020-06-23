@@ -1,65 +1,63 @@
 .page {
-    &__form {
-        &__icon{
-            background-color: yellow;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-bottom: 10px;
-            border-bottom: 1px solid $colorDark;
-            
-            & .flex {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-content: center;
+  &__form {
+    &__icon {
+      background-color: yellow;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $colorDark;
 
-                & i { 
-                    height: 18px;
-                    margin-right: 12px;
-                    color: $colorSecondaryDark;
-                }
+      & .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
 
-                & h2 {
-                    font-family: $fontFamily;
-                    font-weight: 600;
-                    font-size: 18px;
-                    color: transparentize($colorDark, 0.2)
-                }
-            }              
+        & i {
+          height: 18px;
+          margin-right: 12px;
+          color: $colorSecondaryDark;
         }
 
-        &__design{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-content: initial;
-
-            & .flex2{
-                display: flex;
-                flex: column;
-                justify-content: initial;
-                align-content: center;
-                & label{
-                    display:inline-block;
-                }
-                & input{
-                    display:inline-block;
-                }
-                
-            }
-
-        &__fill {
-            //display: flex;
-            //flex-direction: column;
-            label, input{
-                border: 1px solid red;
-              display: block;
-            }
-        }    
+        & h2 {
+          font-family: $fontFamily;
+          font-weight: 600;
+          font-size: 18px;
+          color: transparentize($colorDark, 0.2);
         }
-        
-
+      }
     }
+
+    &__design {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: initial;
+
+      & .flex2 {
+        display: flex;
+        flex: column;
+        justify-content: initial;
+        align-content: center;
+        & label {
+          display: inline-block;
+        }
+        & input {
+          display: inline-block;
+        }
+      }
+    }
+    &__fill {
+      //display: flex;
+      //flex-direction: column;
+      label,
+      input {
+        border: 1px solid red;
+        display: block;
+        width: 100vw;
+      }
+    }
+  }
 }
