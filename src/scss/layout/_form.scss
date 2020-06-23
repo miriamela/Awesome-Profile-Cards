@@ -35,17 +35,22 @@
             flex-direction: row;
             justify-content: space-between;
             align-content: initial;
+            & .try{
+                display: inline-block;
+                width: 40%;
+            }
 
             & .flex2{
+                width: 40%;
                 display: flex;
                 flex: column;
                 justify-content: initial;
                 align-content: center;
                 & label{
-                    display:inline-block;
+                    display: block;
                 }
                 & input{
-                    display:inline-block;
+                    display:block;
                 }
                 
             }
