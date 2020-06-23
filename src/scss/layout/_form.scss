@@ -1,159 +1,214 @@
 .page {
-    &__form {
-        &__icon{
-            //background-color: yellow;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-bottom: 10px;
-            
-            &__title {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-content: center;
+  &__form {
+    padding: 20px 0px;
+    &__icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 0px;
+      border-bottom: 1px solid $colorLines;
 
-                & i { 
-                    height: 18px;
-                    margin-right: 12px;
-                    color: $colorSecondaryDark;
-                }
+      &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
 
-                & h2 {
-                    font-family: $fontFamily;
-                    font-weight: 600;
-                    font-size: 18px;
-                    color: transparentize($colorDark, 0.2)
-                }
-            }              
+        & i {
+          height: 18px;
+          margin-right: 12px;
+          color: $colorSecondaryDark;
         }
 
-        &__design{
-            padding-top: 22px;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-content: initial;
-            & h3{
-                font-family: $fontFamily;
-                font-size: 14px;
-                line-height: 20px;
-                text-transform: uppercase;
-                color: $colorMedium;
-                margin-left: 20px;
-            }
-            &__colorPalette{         
-                label{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    input{
-                        margin-right: 10px;
-                    }
-                    .cold{ 
-                        padding: 0;
-                        .square{
-                            margin: 0;
-                            padding: 0;
-                            display: inline-block;
-                            //border: 1px solid red;
-                            width: 30px;
-                            height: 25px;
-                        }
-                        & .square1{
-                            background-color: #114E4E;
-                        }
-                        & .square2{
-                            background-color: #438792;
-                        }
-                        & .square3{
-                            background-color: #A2DEAF;
-                        }
-                    }
-                    .hot{
-                        margin: 20px 0;
-
-                        .square{
-                            margin: 0;
-                            padding: 0;
-                            display: inline-block;
-                            //border: 1px solid red;
-                            width: 30px;
-                            height: 25px;
-                        }
-                        & .square1{
-                            background-color: #420101;
-                            
-                        }
-                        & .square2{
-                            background-color: #BD1010;
-                            
-                        }
-                        & .square3{
-                            background-color: #E95626;
-                            
-                        }
-                    }
-                    .mix{
-                        .square{
-                            margin: 0;
-                            padding: 0;
-                            display: inline-block;
-                            //border: 1px solid red;
-                            width: 30px;
-                            height: 25px;
-                        }
-                        & .square1{
-                            background-color: #3E5B65;
-                            
-                        }
-                        & .square2{
-                            background-color: #EAB052;
-                            
-                        }
-                        & .square3{
-                            background-color: #A0C0CF;
-                            
-                        }
-                    }
-
-                } 
-               
-                
-            }
-
-        } 
-        &:nth-child(2){
-            border-top: 1px solid $colorDark;
-        }   
-        &__fill {
-            label, input{
-            //border: 1px solid red;
-            display: block;
-            width: 100%;
-
-            }
-            input{
-                height: 30px;
-                border: 1px solid #A2DEAF;
-            }
-            input::placeholder{
-                font-family: $fontFamily;
-                font-size: 14px;
-                line-height: 20px;
-                color: transparentize($colorDark, .5);
-                padding:3px 9px 7px 9px;
-            }
-            label{
-                padding-bottom: 7px;
-                padding-top: 20px;
-                color: $colorPrimaryDark;
-                font-family: $fontFamily;
-                font-size: 14px;
-                line-height: 20px;
-            }
+        & h2 {
+          font-family: $fontFamily;
+          font-weight: 600;
+          font-size: 18px;
+          color: transparentize($colorDark, 0.2);
+          text-transform: uppercase;
         }
+      }
+      & button {
+        background: none;
+      }
     }
+
+    &__design {
+      padding-top: 22px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: initial;
+      & h3 {
+        font-family: $fontFamily;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $colorMedium;
+        margin-left: 20px;
+      }
+      &__colorPalette {
+        label {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          input {
+            margin-right: 10px;
+          }
+          .cold {
+            display: flex;
+            justify-content: flex-start;
+            .square {
+              margin: 0;
+              padding: 0;
+              display: inline-block;
+              //border: 1px solid red;
+              width: 30px;
+              height: 25px;
+            }
+            & .square1 {
+              background-color: #114e4e;
+            }
+            & .square2 {
+              background-color: #438792;
+            }
+            & .square3 {
+              background-color: #a2deaf;
+            }
+          }
+          .hot {
+            display: flex;
+            justify-content: flex-start;
+            margin: 20px 0;
+
+            .square {
+              margin: 0;
+              padding: 0;
+              display: inline-block;
+              //border: 1px solid red;
+              width: 30px;
+              height: 25px;
+            }
+            & .square1 {
+              background-color: #420101;
+            }
+            & .square2 {
+              background-color: #bd1010;
+            }
+            & .square3 {
+              background-color: #e95626;
+            }
+          }
+          .mix {
+            display: flex;
+            justify-content: flex-start;
+            .square {
+              margin: 0;
+              padding: 0;
+              display: inline-block;
+              //border: 1px solid red;
+              width: 30px;
+              height: 25px;
+            }
+            & .square1 {
+              background-color: #3e5b65;
+            }
+            & .square2 {
+              background-color: #eab052;
+            }
+            & .square3 {
+              background-color: #a0c0cf;
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      border-top: 1px solid $colorDark;
+    }
+    &__fill {
+      label,
+      input {
+        //border: 1px solid red;
+        display: block;
+        width: 100%;
+      }
+      input {
+        height: 30px;
+        border: 1px solid #a2deaf;
+      }
+      input::placeholder {
+        font-family: $fontFamily;
+        font-size: 14px;
+        line-height: 20px;
+        color: transparentize($colorDark, 0.5);
+        padding: 3px 9px 7px 9px;
+      }
+      label {
+        padding-bottom: 7px;
+        padding-top: 20px;
+        color: $colorPrimaryDark;
+        font-family: $fontFamily;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &__share {
+      width: 199px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: $colorSecondaryDark;
+      color: $colorLight;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto 30px auto;
+      & .create {
+        background-color: $colorSecondaryDark;
+        text-transform: uppercase;
+        font-family: $fontFamilyBold;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      & .far {
+        font-size: 22px;
+        padding: 0px 9px 0px 0px;
+      }
+    }
+    & .create__text {
+      font-family: $fontFamily;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & h4 {
+        font-size: 18px;
+        color: $colorFontCard;
+      }
+      & p {
+        font-size: 12px;
+        color: $colorSecondaryDark;
+        margin-top: 5px;
+      }
+      & button {
+        width: 181px;
+        height: 30px;
+        border-radius: 3px;
+        color: $colorLight;
+        background-color: $colorTwitter;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        & .fab {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }

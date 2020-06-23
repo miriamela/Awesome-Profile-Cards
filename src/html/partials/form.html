@@ -1,89 +1,93 @@
 <form class="page__form" action="#" method="GET">
   <div class="wrapper">
     <!--first form-->
-  <div class="page__form__icon">
-    <div class="page__form__icon__title">
-      <i class="far fa-object-ungroup"></i>
-      <h2>Diseña</h2>
+    <div class="page__form__icon">
+      <div class="page__form__icon__title">
+        <i class="far fa-object-ungroup"></i>
+        <h2>Diseña</h2>
+      </div>
+      <button><i class="fas fa-angle-down"></i></button>
     </div>
-    <button><i class="fas fa-angle-down"></i></button>
-  </div>
-  <div class="page__form__design">
-    <h3>
-      Colores
-    </h3>
-    <div class="page__form__design__colorPalette">
-      <label for="drawing">
-        <input type="radio" id="drawing" name="test" />
+    <div class="page__form__design">
+      <h3>
+        Colores
+      </h3>
+      <div class="page__form__design__colorPalette">
+        <label for="drawing">
+          <input type="radio" id="drawing" name="test" />
           <div class="cold">
             <span class="square square1"></span>
             <span class="square square2"></span>
             <span class="square square3"></span>
           </div>
-      </label>
-      <label for="drawing2">
-        <input type="radio" id="drawing2" name="test" />
+        </label>
+        <label for="drawing2">
+          <input type="radio" id="drawing2" name="test" />
           <div class="hot">
             <span class="square square1"></span>
             <span class="square square2"></span>
             <span class="square square3"></span>
           </div>
-      </label>
-      <label for="drawing3">
-      <input type="radio" id="drawing3" name="test" />
-        <div class="mix">
-          <span class="square square1"></span>
-          <span class="square square2"></span>
-          <span class="square square3"></span>
-        </div>
-      </label>
+        </label>
+        <label for="drawing3">
+          <input type="radio" id="drawing3" name="test" />
+          <div class="mix">
+            <span class="square square1"></span>
+            <span class="square square2"></span>
+            <span class="square square3"></span>
+          </div>
+        </label>
+      </div>
     </div>
-  </div>
-  <!--second form-->
-  <div class="page__form__icon">
-    <div class="page__form__icon__title">
-      <i class="far fa-keyboard"></i>
-      <h2>Rellena</h2>
+    <!--second form-->
+    <div class="page__form__icon">
+      <div class="page__form__icon__title">
+        <i class="far fa-keyboard"></i>
+        <h2>Rellena</h2>
+      </div>
+      <button><i class="fas fa-angle-down"></i></button>
     </div>
-    <button><i class="fas fa-angle-down"></i></button>
-  </div>
-  <fieldset class="page__form__fill">
-    <label for="firstName"> Nombre completo </label>
+    <fieldset class="page__form__fill">
+      <label for="firstName"> Nombre completo </label>
       <input id="firstName" type="text" placeholder="Ej: Sally Jill" />
-   
-    <label for="work"> Puesto</label>
+
+      <label for="work"> Puesto</label>
       <input id="work" type="text" placeholder="Ej: Front-end unicorn" />
-    
-    <p>Imagen de perfil</p>
-    <button>Añadir imagen</button>
-    <label for="email"> Email</label>
+
+      <p>Imagen de perfil</p>
+      <button>Añadir imagen</button>
+      <label for="email"> Email</label>
       <input id="email" type="email" placeholder="Ej: sally-hill@gmail.com" />
-    
-    <label for="telephone"> Teléfono</label>
+
+      <label for="telephone"> Teléfono</label>
       <input id="telephone" type="tel" placeholder="Ej: 555-55-55-55" />
-    
-    <label for="linkedin"> Linkedin</label>
-      <input id="linkedin" type="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
-    
-    <label for="github"> Github</label>
+
+      <label for="linkedin"> Linkedin</label>
+      <input
+        id="linkedin"
+        type="linkedin"
+        placeholder="Ej: linkedin.com/in/sally.hill"
+      />
+
+      <label for="github"> Github</label>
       <input id="github" type="github" placeholder="Ej: @sally-hill" />
-    
-  </fieldset>
-  <!--third form-->
-  <div class="page__form__icon">
-    <div class="page__form__icon__title">
-      <i class="fas fa-share-alt"></i> 
-      <h2>Comparte</h2>
+    </fieldset>
+    <!--third form-->
+    <div class="page__form__icon">
+      <div class="page__form__icon__title">
+        <i class="fas fa-share-alt"></i>
+        <h2>Comparte</h2>
+      </div>
+      <button><i class="fas fa-angle-down"></i></button>
     </div>
-    <button><i class="fas fa-angle-down"></i></button>
+    <div class="page__form__share">
+      <i class="far fa-address-card"></i>
+      <input class="create" type="submit" value="crear tarjeta" />
+    </div>
+    <div class="create__text">
+      <h4>La tarjeta ha sido creada:</h4>
+      <p>https://awesome-cards.com/prueba</p>
+      <button><i class="fab fa-twitter"></i>compartir en twitter</button>
+    </div>
   </div>
-  <fieldset class="page__form__share">
-    <input type="submit" value="crear tarjeta">  
-  </fieldset>
-  <div>
-      <h4>La tarjeta ha sido creada</h4>
-      <p>Esto es el link de la tarjeta</p>
-      <button>compartir en twitter</button>
-  </div>  
-</div>  
 </form>
