@@ -1,5 +1,4 @@
 /* COLORS */
-
 $colorDark: #000;
 $colorLight: #fff;
 $colorMedium: #6b6b6b;
@@ -11,13 +10,13 @@ $colorSecondaryLight: #f9f4dc;
 $colorFontCard: #54585a; /*para revisar*/
 $colorBackgroundDark: #bfcdd0; /*para revisar*/
 $colorBackgroundLight: #dde9ed; /*para revisar*/
-
+$colorLines: #d8d8d8;
+$colorTwitter: #00a0f5;
 /* FONTS */
 $fontFamily: "Open Sans", sans-serif;
+$fontFamilyBold: "Open Sans", sans-serif, bold;
 $secondaryFontFamily: "Merriweather", sans-serif;
 $fontFamilyTertiary: "Montserrat", sans-serif;
-
 /* BREAKPOINTS */
-
 $tablet: 768px;
 $desktop: 1024px;
