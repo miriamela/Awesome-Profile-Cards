@@ -1,12 +1,11 @@
 .page {
     &__form {
         &__icon{
-            background-color: yellow;
+            //background-color: yellow;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding-bottom: 10px;
-            border-bottom: 1px solid $colorDark;
             
             &__title {
                 display: flex;
@@ -30,51 +29,131 @@
         }
 
         &__design{
+            padding-top: 22px;
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-content: initial;
             & h3{
-              
+                font-family: $fontFamily;
+                font-size: 14px;
+                line-height: 20px;
+                text-transform: uppercase;
+                color: $colorMedium;
+                margin-left: 20px;
             }
-
-            &__colorPalette{
-                
+            &__colorPalette{         
                 label{
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
+                    input{
+                        margin-right: 10px;
+                    }
                     .cold{ 
                         padding: 0;
-
-                        span{
+                        .square{
                             margin: 0;
                             padding: 0;
                             display: inline-block;
-                            border: 1px solid red;
+                            //border: 1px solid red;
                             width: 30px;
                             height: 25px;
                         }
+                        & .square1{
+                            background-color: #114E4E;
+                        }
+                        & .square2{
+                            background-color: #438792;
+                        }
+                        & .square3{
+                            background-color: #A2DEAF;
+                        }
                     }
+                    .hot{
+                        margin: 20px 0;
+
+                        .square{
+                            margin: 0;
+                            padding: 0;
+                            display: inline-block;
+                            //border: 1px solid red;
+                            width: 30px;
+                            height: 25px;
+                        }
+                        & .square1{
+                            background-color: #420101;
+                            
+                        }
+                        & .square2{
+                            background-color: #BD1010;
+                            
+                        }
+                        & .square3{
+                            background-color: #E95626;
+                            
+                        }
+                    }
+                    .mix{
+                        .square{
+                            margin: 0;
+                            padding: 0;
+                            display: inline-block;
+                            //border: 1px solid red;
+                            width: 30px;
+                            height: 25px;
+                        }
+                        & .square1{
+                            background-color: #3E5B65;
+                            
+                        }
+                        & .square2{
+                            background-color: #EAB052;
+                            
+                        }
+                        & .square3{
+                            background-color: #A0C0CF;
+                            
+                        }
+                    }
+
                 } 
                
                 
-
-                
             }
 
+        } 
+        &:nth-child(2){
+            border-top: 1px solid $colorDark;
+        }   
         &__fill {
-            //display: flex;
-            //flex-direction: column;
             label, input{
-                border: 1px solid red;
-              display: block;
-            }
-        }    
-        }
-        
+            //border: 1px solid red;
+            display: block;
+            width: 100%;
 
+            }
+            input{
+                height: 30px;
+                border: 1px solid #A2DEAF;
+            }
+            input::placeholder{
+                font-family: $fontFamily;
+                font-size: 14px;
+                line-height: 20px;
+                color: transparentize($colorDark, .5);
+                padding:3px 9px 7px 9px;
+            }
+            label{
+                padding-bottom: 7px;
+                padding-top: 20px;
+                color: $colorPrimaryDark;
+                font-family: $fontFamily;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
     }
 }
