@@ -19,7 +19,8 @@
       width: 264.8px;
       text-align: center;
       color: $colorPrimaryDark;
-      font-size: 1rem;
+      font-family: $fontFamily;
+      font-size: 0.75rem;
       padding-bottom: 27px;
     }
     &__iconBox {
@@ -74,6 +75,7 @@
         font-size: 1.5rem;
       }
       &__paragraph {
+        font-size: 1rem;
         width: 331px;
       }
       &__iconBox {
