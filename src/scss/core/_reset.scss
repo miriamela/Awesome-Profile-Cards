@@ -365,12 +365,3 @@ template {
 .page {
   font-size: 16px;
 }
-
-.wrapper {
-  padding: 20px;
-  margin: auto;
-
-  @include tablet {
-    padding: 40px;
-  }
-}

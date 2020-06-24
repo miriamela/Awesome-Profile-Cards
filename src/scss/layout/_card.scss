@@ -1,66 +1,88 @@
-.page__card {
-  background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-  padding: 38px 35px 40px 45px;
-  &__reset {
-    width: 75px;
-    height: 30px;
-    border-radius: 22.5px;
-    border: 1px solid $colorLight;
-    background-color: $colorBackgroundDark;
-    font-size: 12px;
-    font-family: $fontFamily;
-    color: $colorFontCard;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    .far .fa-trash-alt {
-      font-size: 12px;
-      color: $colorFontCard;
-    }
+.page__container {
+  @include tablet {
+    padding: 20px 40px;
   }
-  &__box {
-    background-color: $colorLight;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
-    width: 240px;
-    height: 329px;
-    padding: 21px 0 10px 0;
-    &__border {
-      border-left: 5px solid $colorPrimaryMedium;
-      padding-left: 20px;
-      margin-bottom: 10px;
-    }
-    &__name {
-      font-family: $fontFamilyTertiary;
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 20px;
-      color: $colorPrimaryDark;
-    }
-    &__job {
-      font-family: $fontFamilyTertiary;
-      font-size: 16px;
-      line-height: 20px;
-      color: $colorFontCard;
-    }
-    &__imgContainer {
-      width: 240px;
-      height: 200px;
-      border: 1px solid red;
-    }
-    &__socialMedia {
-      display: flex;
-      padding: 10px 10px 0px 10px;
+  &__card {
+    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    padding: 38px 35px 40px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      li {
-        color: $colorPrimaryDark;
+    @include tablet {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    &__reset {
+      width: 240px;
+
+      &__btn {
+        width: 75px;
+        height: 30px;
+        border-radius: 22.5px;
+        border: 1px solid $colorLight;
+        background-color: $colorBackgroundDark;
+        font-size: 12px;
+        font-family: $fontFamily;
+        color: $colorFontCard;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        .far .fa-trash-alt {
+          font-size: 12px;
+          color: $colorFontCard;
+        }
+      }
+    }
+
+    &__box {
+      background-color: $colorLight;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2),
+        0 1px 3px 0 rgba(0, 0, 0, 0.35);
+      width: 240px;
+      height: 329px;
+      padding: 21px 0 10px 0;
+      &__border {
+        border-left: 5px solid $colorPrimaryMedium;
+        padding-left: 20px;
+        margin-bottom: 10px;
+      }
+      &__name {
+        font-family: $fontFamilyTertiary;
         font-size: 18px;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        border: 2px solid $colorPrimaryLight;
+        font-weight: bold;
+        line-height: 20px;
+        color: $colorPrimaryDark;
+      }
+      &__job {
+        font-family: $fontFamilyTertiary;
+        font-size: 16px;
+        line-height: 20px;
+        color: $colorFontCard;
+      }
+      &__imgContainer {
+        width: 240px;
+        height: 200px;
+        border: 1px solid red;
+      }
+      &__socialMedia {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
+        padding: 10px 10px 0px 10px;
+
+        li {
+          color: $colorPrimaryDark;
+          font-size: 18px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 2px solid $colorPrimaryLight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+        }
       }
     }
   }
