@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Profile Cards</title>
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c75582e3c5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <a class="page__header__logo" href="./index.html" title="Take me home">
+        <img
+          src="./assets/images/logo-awesome-profile-cards.svg"
+          alt="Awesome profile cards logo"
+        />
+      </a>
+    </header>
+
+    <section class="page__card">
+      <button class="page__card__reset">
+        <i class="far fa-trash-alt"></i> Reset
+      </button>
+      <div class="page__card__box">
+        <div class="page__card__box__border">
+          <h3 class="page__card__box__name">Nombre Apellido</h3>
+          <p class="page__card__box__job">Front-end Developer</p>
+        </div>
+        <div class="page__card__box__imgContainer"><img src="" alt="" /></div>
+        <ul class="page__card__box__socialMedia">
+          <li>
+            <a href="#" title="Contact by phone">
+              <i class="fas fa-mobile-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Contact by email">
+              <i class="far fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Go to Linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Go to  Github">
+              <i class="fab fa-github-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <form class="page__form" action="#" method="GET">
+      <div class="wrapper">
+        <!--first form-->
+        <div class="page__form__icon">
+          <div class="page__form__icon__title">
+            <i class="far fa-object-ungroup"></i>
+            <h2>Diseña</h2>
+          </div>
+          <button><i class="fas fa-angle-down"></i></button>
+        </div>
+        <div class="page__form__design">
+          <h3>
+            Colores
+          </h3>
+          <div class="page__form__design__colorPalette">
+            <label for="drawing">
+              <input type="radio" id="drawing" name="test" />
+              <div class="cold">
+                <span class="square square1"></span>
+                <span class="square square2"></span>
+                <span class="square square3"></span>
+              </div>
+            </label>
+            <label for="drawing2">
+              <input type="radio" id="drawing2" name="test" />
+              <div class="hot">
+                <span class="square square1"></span>
+                <span class="square square2"></span>
+                <span class="square square3"></span>
+              </div>
+            </label>
+            <label for="drawing3">
+              <input type="radio" id="drawing3" name="test" />
+              <div class="mix">
+                <span class="square square1"></span>
+                <span class="square square2"></span>
+                <span class="square square3"></span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <!--second form-->
+        <div class="page__form__icon">
+          <div class="page__form__icon__title">
+            <i class="far fa-keyboard"></i>
+            <h2>Rellena</h2>
+          </div>
+          <button><i class="fas fa-angle-down"></i></button>
+        </div>
+        <fieldset class="page__form__fill">
+          <label for="firstName"> Nombre completo </label>
+          <input id="firstName" type="text" placeholder="Ej: Sally Jill" />
+
+          <label for="work"> Puesto</label>
+          <input id="work" type="text" placeholder="Ej: Front-end unicorn" />
+
+          <p>Imagen de perfil</p>
+          <button>Añadir imagen</button>
+          <label for="email"> Email</label>
+          <input id="email" type="email" placeholder="Ej: sally-hill@gmail.com" />
+
+          <label for="telephone"> Teléfono</label>
+          <input id="telephone" type="tel" placeholder="Ej: 555-55-55-55" />
+
+          <label for="linkedin"> Linkedin</label>
+          <input
+            id="linkedin"
+            type="linkedin"
+            placeholder="Ej: linkedin.com/in/sally.hill"
+          />
+
+          <label for="github"> Github</label>
+          <input id="github" type="github" placeholder="Ej: @sally-hill" />
+        </fieldset>
+        <!--third form-->
+        <div class="page__form__icon">
+          <div class="page__form__icon__title">
+            <i class="fas fa-share-alt"></i>
+            <h2>Comparte</h2>
+          </div>
+          <button><i class="fas fa-angle-down"></i></button>
+        </div>
+        <div class="page__form__share">
+          <i class="far fa-address-card"></i>
+          <input class="create" type="submit" value="crear tarjeta" />
+        </div>
+        <div class="create__text">
+          <h4>La tarjeta ha sido creada:</h4>
+          <p>https://awesome-cards.com/prueba</p>
+          <button><i class="fab fa-twitter"></i>compartir en twitter</button>
+        </div>
+      </div>
+    </form>
+
+    <footer class="page__footer">
+      <div class="page__footer__box">
+        <p class="page__footer__box__paragraph">Awesome profile-cards @2018</p>
+        <a href="https://adalab.es" title="Go to adalab.es" target="_blank">
+          <img src="./assets/images/logo-adalab.png" alt="Adalab" />
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>
