@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100vh;
     &__logo {
       padding-bottom: 35.4px;
@@ -38,6 +38,7 @@
         color: $colorFontCard;
         font-family: $fontFamily;
         font-size: 1rem;
+        width: calc(100% / 3);
         & i {
           font-size: 1.625rem;
           color: $colorSecondaryDark;
@@ -60,6 +61,8 @@
       font-family: $fontFamily;
       font-size: 1rem;
       font-weight: 600;
+
+      line-height: 5rem;
     }
   }
 }
