@@ -142,15 +142,14 @@
     }
     &__fill {
       padding: 0px;
-      p{
+      p {
         font-family: $fontFamily;
         font-size: 14px;
         line-height: 20px;
         color: $colorPrimaryDark;
         margin-top: 18px;
-
       }
-      button{
+      button {
         width: 140px;
         height: 30px;
         border-radius: 3px;
@@ -160,7 +159,6 @@
         font-size: 14px;
         line-height: 20px;
         margin-top: 10px;
-
       }
 
       label,
@@ -245,4 +243,8 @@
       }
     }
   }
+}
+
+.hidden {
+  display: none;
 }

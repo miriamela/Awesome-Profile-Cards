@@ -54,13 +54,13 @@
         font-size: 18px;
         font-weight: bold;
         line-height: 20px;
-        color: $colorPrimaryDark;
+        /*color: $colorPrimaryDark;*/
       }
       &__job {
         font-family: $fontFamilyTertiary;
         font-size: 16px;
         line-height: 20px;
-        color: $colorFontCard;
+        /* color: $colorFontCard;*/
       }
       &__imgContainer {
         width: 240px;
@@ -72,12 +72,12 @@
         padding: 10px 10px 0px 10px;
 
         li {
-          color: $colorPrimaryDark;
+          /* color: $colorPrimaryDark;*/
           font-size: 18px;
           width: 32px;
           height: 32px;
           border-radius: 50%;
-          border: 2px solid $colorPrimaryLight;
+          /* border: 2px solid $colorPrimaryLight;*/
           display: flex;
           justify-content: center;
           align-items: center;
@@ -86,4 +86,36 @@
       }
     }
   }
+}
+
+/* JS */
+.cold-name {
+  color: $colorPrimaryDark;
+}
+.cold-job {
+  color: $colorFontCard;
+}
+.cold-icon {
+  color: $colorPrimaryDark;
+  border: 2px solid $colorPrimaryLight;
+}
+.red-name {
+  color: #420101;
+}
+.red-job {
+  color: #bd1010;
+}
+.red-icon {
+  color: #420101;
+  border: 2px solid #e95626;
+}
+.mix-name {
+  color: #3e5b65;
+}
+.mix-job {
+  color: #eab052;
+}
+.mix-icon {
+  color: #3e5b65;
+  border: 2px solid #a0c0cf;
 }

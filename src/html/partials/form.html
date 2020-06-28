@@ -5,15 +5,15 @@
       <i class="far fa-object-ungroup"></i>
       <h2>Diseña</h2>
     </div>
-    <button><i class="fas fa-angle-down"></i></button>
+    <button class="js-angleDown1"><i class="fas fa-angle-down"></i></button>
   </div>
-  <div class="page__container__form__design">
+  <div class="page__container__form__design js-design hidden">
     <h3>
       Colores
     </h3>
     <div class="page__container__form__design__colorPalette">
       <label for="drawing">
-        <input type="radio" id="drawing" name="test" />
+        <input type="radio" id="drawing" name="test" class="cold-palette" />
         <div class="cold">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -21,7 +21,7 @@
         </div>
       </label>
       <label for="drawing2">
-        <input type="radio" id="drawing2" name="test" />
+        <input type="radio" id="drawing2" name="test" class="hot-palette" />
         <div class="hot">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -29,7 +29,7 @@
         </div>
       </label>
       <label for="drawing3">
-        <input type="radio" id="drawing3" name="test" />
+        <input type="radio" id="drawing3" name="test" class="mix-palette" />
         <div class="mix">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -44,28 +44,58 @@
       <i class="far fa-keyboard"></i>
       <h2>Rellena</h2>
     </div>
-    <button><i class="fas fa-angle-down"></i></button>
+    <button class="js-angleDown2"><i class="fas fa-angle-down"></i></button>
   </div>
-  <fieldset class="page__container__form__fill">
+  <fieldset class="page__container__form__fill js-formData hidden">
     <label for="firstName"> Nombre completo </label>
-    <input id="firstName" type="text" placeholder="Ej: Sally Jill" />
+    <input
+      id="firstName"
+      type="text"
+      class="js-userName"
+      placeholder="Ej: Sally Jill"
+    />
 
     <label for="work"> Puesto</label>
-    <input id="work" type="text" placeholder="Ej: Front-end unicorn" />
+    <input
+      id="work"
+      type="text"
+      class="js-userJob"
+      placeholder="Ej: Front-end unicorn"
+    />
 
     <p>Imagen de perfil</p>
     <button>Añadir imagen</button>
     <label for="email"> Email</label>
-    <input id="email" type="email" placeholder="Ej: sally-hill@gmail.com" />
+    <input
+      id="email"
+      type="email"
+      class="js-email"
+      placeholder="Ej: sally-hill@gmail.com"
+    />
 
     <label for="telephone"> Teléfono</label>
-    <input id="telephone" type="tel" placeholder="Ej: 555-55-55-55" />
+    <input
+      id="telephone"
+      type="tel"
+      class="js-phoneNumber"
+      placeholder="Ej: 555-55-55-55"
+    />
 
     <label for="linkedin"> Linkedin</label>
-    <input id="linkedin" type="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+    <input
+      id="linkedin"
+      type="linkedin"
+      class="js-linkedin"
+      placeholder="Ej: linkedin.com/in/sally.hill"
+    />
 
     <label for="github"> Github</label>
-    <input id="github" type="github" placeholder="Ej: @sally-hill" />
+    <input
+      id="github"
+      type="github"
+      class="js-github"
+      placeholder="Ej: @sally-hill"
+    />
   </fieldset>
   <!--third form-->
   <div class="page__container__form__icon">
@@ -73,13 +103,13 @@
       <i class="fas fa-share-alt"></i>
       <h2>Comparte</h2>
     </div>
-    <button><i class="fas fa-angle-down"></i></button>
+    <button class="js-angleDown3"><i class="fas fa-angle-down"></i></button>
   </div>
-  <div class="page__container__form__share">
+  <div class="page__container__form__share js-share hidden">
     <i class="far fa-address-card"></i>
     <input class="create" type="submit" value="crear tarjeta" />
   </div>
-  <div class="create__text">
+  <div class="create__text js-createText hidden">
     <h4>La tarjeta ha sido creada:</h4>
     <p>https://awesome-cards.com/prueba</p>
     <button><i class="fab fa-twitter"></i>Compartir en twitter</button>
