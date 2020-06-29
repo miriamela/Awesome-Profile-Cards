@@ -246,5 +246,9 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.rot {
+  transform: rotate(0.5turn);
 }
