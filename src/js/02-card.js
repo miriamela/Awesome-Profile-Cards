@@ -9,7 +9,6 @@ const mixPalette = document.querySelector('.mix-palette');
 const cardName = document.querySelector('.js-name');
 const cardPosition = document.querySelector('.js-job');
 const socialMediaIcons = document.querySelector('.js-socialMedia-icons');
-console.log(socialMediaIcons);
 
 //FUNCTIONS
 function ChangeToColdPalette() {
@@ -88,6 +87,8 @@ coldPalette.addEventListener('click', ChangeToColdPalette);
 hotPalette.addEventListener('click', ChangeToHotPalette);
 mixPalette.addEventListener('click', ChangeToMixPalette);
 
+//////////////////////////////////////////////////////////
+
 //DATA FORM
 
 //SELECTORS...
@@ -100,7 +101,10 @@ const userGithubElem = document.querySelector('.js-github');
 const userData = {};
 const renderedUserName = document.querySelector('.js-userName-result');
 const renderedUserJob = document.querySelector('.js-userJob-result');
-/*const renderedUserPhoneNumber = document.querySelector('.js-phone-result');*/
+const renderedUserPhoneNumber = document.querySelector('.js-phone-result');
+const renderedUserEmail = document.querySelector('.js-email-result');
+const renderedUserLinkedin = document.querySelector('.js-linkedin-result');
+const renderedUserGithub = document.querySelector('.js-github-result');
 
 //FUNCTIONS...
 function getInputValues() {
@@ -114,7 +118,10 @@ function getInputValues() {
 function renderUserInfo(obj) {
   renderedUserName.innerHTML = obj.name;
   renderedUserJob.innerHTML = obj.job;
-  /*renderedUserPhoneNumber.href = obj.tel;*/
+  renderedUserPhoneNumber.href = obj.tel;
+  renderedUserEmail.href = `mailto: ${obj.email}`;
+  renderedUserLinkedin.href = obj.linkedin;
+  renderedUserGithub.href = `https://github.com/${obj.github}`;
 }
 function updateImputHandler() {
   getInputValues();
