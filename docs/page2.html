@@ -41,7 +41,7 @@
           </button>
         </div>
         <div class="page__container__card__box">
-          <div class="page__container__card__box__border">
+          <div class="page__container__card__box__border cold-border js-border-color">
             <h3
               class="page__container__card__box__name js-name cold-name js-userName-result"
             >
@@ -58,22 +58,42 @@
           </div>
           <ul class="page__container__card__box__socialMedia js-socialMediaList">
             <li class="cold-icon js-socialMedia-icons">
-              <a class="js-phone-result" href="#" title="Contact by phone">
+              <a
+                class="js-phone-result"
+                href=""
+                title="Contact by phone"
+                target="_blank"
+              >
                 <i class="fas fa-mobile-alt"></i>
               </a>
             </li>
             <li class="js-socialMedia-icons cold-icon">
-              <a class="js-email-result" href="" title="Contact by email">
+              <a
+                class="js-email-result"
+                href=""
+                title="Contact by email"
+                target="_blank"
+              >
                 <i class="far fa-envelope"></i>
               </a>
             </li>
             <li class="js-socialMedia-icons cold-icon">
-              <a class="js-linkedin-result" href="" title="Go to Linkedin">
+              <a
+                class="js-linkedin-result"
+                href=""
+                title="Go to Linkedin"
+                target="_blank"
+              >
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
             <li class="js-socialMedia-icons cold-icon">
-              <a class="js-github-result" href="" title="Go to  Github">
+              <a
+                class="js-github-result"
+                href=""
+                title="Go to  Github"
+                target="_blank"
+              >
                 <i class="fab fa-github-alt"></i>
               </a>
             </li>
@@ -96,7 +116,13 @@
           </h3>
           <div class="page__container__form__design__colorPalette">
             <label for="drawing">
-              <input type="radio" id="drawing" name="test" class="cold-palette" />
+              <input
+                type="radio"
+                id="drawing"
+                name="drawing"
+                class="cold-palette"
+                checked
+              />
               <div class="cold">
                 <span class="square square1"></span>
                 <span class="square square2"></span>
@@ -104,7 +130,7 @@
               </div>
             </label>
             <label for="drawing2">
-              <input type="radio" id="drawing2" name="test" class="hot-palette" />
+              <input type="radio" id="drawing2" name="drawing" class="hot-palette" />
               <div class="hot">
                 <span class="square square1"></span>
                 <span class="square square2"></span>
@@ -112,7 +138,7 @@
               </div>
             </label>
             <label for="drawing3">
-              <input type="radio" id="drawing3" name="test" class="mix-palette" />
+              <input type="radio" id="drawing3" name="drawing" class="mix-palette" />
               <div class="mix">
                 <span class="square square1"></span>
                 <span class="square square2"></span>
@@ -133,6 +159,7 @@
           <label for="firstName"> Nombre completo </label>
           <input
             id="firstName"
+            name="full_name"
             type="text"
             class="js-userName"
             placeholder="Ej: Sally Jill"
@@ -141,6 +168,7 @@
           <label for="work"> Puesto</label>
           <input
             id="work"
+            name="job"
             type="text"
             class="js-userJob"
             placeholder="Ej: Front-end unicorn"
@@ -152,6 +180,7 @@
           <input
             id="email"
             type="email"
+            name="email"
             class="js-email"
             placeholder="Ej: sally-hill@gmail.com"
           />
@@ -159,6 +188,7 @@
           <label for="telephone"> Teléfono</label>
           <input
             id="telephone"
+            name="phone"
             type="tel"
             class="js-phoneNumber"
             placeholder="Ej: 555-55-55-55"
@@ -167,7 +197,8 @@
           <label for="linkedin"> Linkedin</label>
           <input
             id="linkedin"
-            type="linkedin"
+            name="linkedin"
+            type="text"
             class="js-linkedin"
             placeholder="Ej: linkedin.com/in/sally.hill"
           />
@@ -175,7 +206,8 @@
           <label for="github"> Github</label>
           <input
             id="github"
-            type="github"
+            name="github"
+            type="text"
             class="js-github"
             placeholder="Ej: @sally-hill"
           />
@@ -190,7 +222,7 @@
         </div>
         <div class="page__container__form__share js-share hidden">
           <i class="far fa-address-card"></i>
-          <input class="create" type="submit" value="crear tarjeta" />
+          <input class="create" type="submit" value="crear tarjeta" disabled />
         </div>
         <div class="create__text js-createText hidden">
           <h4>La tarjeta ha sido creada:</h4>

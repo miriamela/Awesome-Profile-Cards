@@ -1,40 +1,52 @@
-'use strict';
+"use strict";
 
 //SELECTORS...
-const angleDownButton1 = document.querySelector('.js-angleDown1');
-const designSection = document.querySelector('.js-design');
+const angleDownButton1 = document.querySelector(".js-angleDown1");
+angleDownButton1.section = document.querySelector(".js-design");
 
-const angleDownButton2 = document.querySelector('.js-angleDown2');
-const formSection = document.querySelector('.js-formData');
+const angleDownButton2 = document.querySelector(".js-angleDown2");
+angleDownButton2.section = document.querySelector(".js-formData");
 
-const angleDownButton3 = document.querySelector('.js-angleDown3');
-const createSection = document.querySelector('.js-share');
+const angleDownButton3 = document.querySelector(".js-angleDown3");
+angleDownButton3.section = document.querySelector(".js-share");
+
+//VARS
+const sectionArr = [
+  angleDownButton1.section,
+  angleDownButton2.section,
+  angleDownButton3.section,
+];
 
 // eslint-disable-next-line no-unused-vars
-const createButton = document.querySelector('.create');
-// const shareSection = document.querySelector('.js-createText');
+const createButton = document.querySelector(".create");
+const shareSection = document.querySelector(".js-createText");
 
 //FUNCTIONS
 
 function displayOrHideContent(event) {
-  designSection.classList.toggle('hidden');
-  event.currentTarget.classList.toggle('rot');
+  event.currentTarget.section.classList.toggle("hidden");
+  for (const sect of sectionArr) {
+    if (sect !== event.currentTarget.section) {
+      sect.classList.add("hidden");
+      if (sect === angleDownButton3.section) {
+        shareSection.classList.add("hidden");
+      }
+    }
+  }
+  event.currentTarget.classList.toggle("rot");
+  if (event.currentTarget.section.classList.contains("js-share")) {
+    if (event.currentTarget.section.classList.contains("hidden")) {
+      shareSection.classList.add("hidden");
+    }
+  }
 }
-function displayOrHideContent2(event) {
-  formSection.classList.toggle('hidden');
-  event.currentTarget.classList.toggle('rot');
+function displayOrHideShareSection() {
+  shareSection.classList.toggle("hidden");
 }
-function displayOrHideContent3(event) {
-  createSection.classList.toggle('hidden');
-  event.currentTarget.classList.toggle('rot');
-}
-// function displayOrHideShareSection() {
-//   shareSection.classList.toggle('hidden');
-// }
 
 //LISTENERS
-angleDownButton1.addEventListener('click', displayOrHideContent);
-angleDownButton2.addEventListener('click', displayOrHideContent2);
-angleDownButton3.addEventListener('click', displayOrHideContent3);
+angleDownButton1.addEventListener("click", displayOrHideContent);
+angleDownButton2.addEventListener("click", displayOrHideContent);
+angleDownButton3.addEventListener("click", displayOrHideContent);
 
-// createButton.addEventListener('click', displayOrHideShareSection);
+createButton.addEventListener("click", displayOrHideShareSection);
