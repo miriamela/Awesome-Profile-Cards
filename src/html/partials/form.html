@@ -13,7 +13,13 @@
     </h3>
     <div class="page__container__form__design__colorPalette">
       <label for="drawing">
-        <input type="radio" id="drawing" name="test" class="cold-palette" />
+        <input
+          type="radio"
+          id="drawing"
+          name="drawing"
+          class="cold-palette"
+          checked
+        />
         <div class="cold">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -21,7 +27,7 @@
         </div>
       </label>
       <label for="drawing2">
-        <input type="radio" id="drawing2" name="test" class="hot-palette" />
+        <input type="radio" id="drawing2" name="drawing" class="hot-palette" />
         <div class="hot">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -29,7 +35,7 @@
         </div>
       </label>
       <label for="drawing3">
-        <input type="radio" id="drawing3" name="test" class="mix-palette" />
+        <input type="radio" id="drawing3" name="drawing" class="mix-palette" />
         <div class="mix">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -107,7 +113,7 @@
   </div>
   <div class="page__container__form__share js-share hidden">
     <i class="far fa-address-card"></i>
-    <input class="create" type="submit" value="crear tarjeta" />
+    <input class="create" type="submit" value="crear tarjeta" disabled />
   </div>
   <div class="create__text js-createText hidden">
     <h4>La tarjeta ha sido creada:</h4>
