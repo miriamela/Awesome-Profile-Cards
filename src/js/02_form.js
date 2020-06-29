@@ -4,7 +4,7 @@
 
 const userName=document.querySelector('#firstName');
 const userWork=document.querySelector('#work');
-const userEmail=document.querySelector('#emai');
+const userEmail=document.querySelector('#email');
 const userTelephone=document.querySelector('#telephone');
 const userLinkedin=document.querySelector('#linkedin');
 const userGithub=document.querySelector('#github');
@@ -17,8 +17,7 @@ const renderUserWork=document.querySelector('.page__container__card__box__job');
 //constantes de donde las pinto .href
 
 const renderUserTelephone=document.querySelector('.cardPhoneNumber');
-//issue del mailto... como e donde se lo digo?
-//const renderUserEmail=document.querySelector('#cardEmail')+ href =`mailto:${userEmail}`; 
+const renderUserEmail=document.querySelector('#cardEmail'); 
 const renderUserLinkedin=document.querySelector('.cardLinkedin');
 const renderUserGithub=document.querySelector('.cardGithub');
 
@@ -31,7 +30,7 @@ const userData={};
 function getValue (){
   userData.name=userName.value;
   userData.work=userWork.value;
-  //userData.email=userEmail.value;
+  userData.email=userEmail.value;
   userData.telephone=userTelephone.value;
   userData.linkedin=userLinkedin.value;
   userData.github=userGithub.value;
@@ -44,7 +43,7 @@ function renderValue (userData){
   renderUserName.innerHTML=userData.name;
   renderUserWork.innerHTML=userData.work;
   renderUserTelephone.href=userData.telephone;
-  //renderUserEmail.href=userData.email;
+  renderUserEmail.href= `mailto:${userData.email}`;
   renderUserLinkedin.href=userData.linkedin;
   renderUserGithub.href=userData.github;
 }
@@ -60,7 +59,7 @@ function pleaseWork(){
 //listening evens
 userName.addEventListener('keyup', pleaseWork);
 userWork.addEventListener('keyup', pleaseWork);
-//userEmail.addEventListener('keyup', pleaseWork);
+userEmail.addEventListener('keyup', pleaseWork);
 userTelephone.addEventListener('keyup', pleaseWork);
 userLinkedin.addEventListener('keyup', pleaseWork);
 userGithub.addEventListener('keyup', pleaseWork);
