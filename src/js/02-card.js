@@ -76,11 +76,12 @@ function getInputValues() {
   userData.tel = userPhoneNumberElem.value;
   userData.email = userEmailElem.value;
   userData.linkedin = userLinkedinElem.value;
-  if (userGithubElem.value[0] === "@") {
-    userData.github = userGithubElem.value.splice(0, 1);
-  } else {
-    userData.github = userGithubElem.value;
-  }
+  //   if (userGithubElem.value === "@") {
+  //     userData.github = userGithubElem.value.splice(0, 1);
+  //   } else {
+  //     userData.github = userGithubElem.value;
+  //   }
+  userData.github = userGithubElem.value;
 }
 function renderUserInfo(obj) {
   renderedUserName.innerHTML = obj.name;
