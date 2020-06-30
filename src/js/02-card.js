@@ -133,6 +133,7 @@ const renderedUserPhoneNumber = document.querySelector('.js-phone-result');
 const renderedUserEmail = document.querySelector('.js-email-result');
 const renderedUserLinkedin = document.querySelector('.js-linkedin-result');
 const renderedUserGithub = document.querySelector('.js-github-result');
+const createButton = document.querySelector('.create');
 
 //FUNCTIONS...
 function getInputValues() {
@@ -151,7 +152,7 @@ function renderUserInfo(obj) {
   renderedUserLinkedin.href = obj.linkedin;
   renderedUserGithub.href = `https://github.com/${obj.github}`;
 
-  if (userData.name !== ' ') {
+  if (userData.name !== '') {
     createButton.disabled = false;
   } else {
     createButton.disabled = true;
