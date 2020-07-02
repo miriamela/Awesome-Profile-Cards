@@ -68,6 +68,8 @@ const renderedUserPhoneNumber = document.querySelector('.js-phone-result');
 const renderedUserEmail = document.querySelector('.js-email-result');
 const renderedUserLinkedin = document.querySelector('.js-linkedin-result');
 const renderedUserGithub = document.querySelector('.js-github-result');
+const resetButton = document.querySelector('.js-reset-button');
+const form = document.querySelector('.js-form');
 
 //FUNCTIONS...
 function getInputValues() {
@@ -106,6 +108,11 @@ function updateInputHandler() {
   getInputValues();
   renderUserInfo(userData);
 }
+//   if (userGithubElem.value === "@") {
+
+function resetForm() {
+  form.reset();
+}
 //LISTENERS...
 userNameElem.addEventListener('keyup', updateInputHandler);
 userJobElem.addEventListener('keyup', updateInputHandler);
@@ -113,3 +120,4 @@ userPhoneNumberElem.addEventListener('keyup', updateInputHandler);
 userEmailElem.addEventListener('keyup', updateInputHandler);
 userLinkedinElem.addEventListener('keyup', updateInputHandler);
 userGithubElem.addEventListener('keyup', updateInputHandler);
+resetButton.addEventListener('click', resetForm);
