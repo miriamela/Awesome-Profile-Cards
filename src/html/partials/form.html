@@ -13,13 +13,7 @@
     </h3>
     <div class="page__container__form__design__colorPalette">
       <label for="drawing">
-        <input
-          type="radio"
-          id="drawing"
-          name="drawing"
-          class="cold-palette"
-          checked
-        />
+        <input type="radio" id="drawing" name="drawing" class="cold-palette" checked />
         <div class="cold">
           <span class="square square1"></span>
           <span class="square square2"></span>
@@ -54,54 +48,32 @@
   </div>
   <fieldset class="page__container__form__fill js-formData hidden">
     <label for="firstName"> Nombre completo </label>
-    <input
-      id="firstName"
-      type="text"
-      class="js-userName"
-      placeholder="Ej: Sally Jill"
-    />
+    <input id="firstName" type="text" class="js-userName" placeholder="Ej: Sally Jill" />
 
     <label for="work"> Puesto</label>
-    <input
-      id="work"
-      type="text"
-      class="js-userJob"
-      placeholder="Ej: Front-end unicorn"
-    />
+    <input id="work" type="text" class="js-userJob" placeholder="Ej: Front-end unicorn" />
 
     <p>Imagen de perfil</p>
-    <button>Añadir imagen</button>
+    <div class="action">
+      <button class="action__upload-btn js__profile-trigger" type="button">Get IMAGE!</button>
+      <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn">
+    </div>
+    <div class="profile">
+      <div class="profile__image js__profile-image"
+        style="background-image:url(https://via.placeholder.com/300x300/cccccc/666666/?text=IMAGE)"></div>
+      <div class="profile__preview js__profile-preview"></div>
+    </div>
     <label for="email"> Email</label>
-    <input
-      id="email"
-      type="email"
-      class="js-email"
-      placeholder="Ej: sally-hill@gmail.com"
-    />
+    <input id="email" type="email" class="js-email" placeholder="Ej: sally-hill@gmail.com" />
 
     <label for="telephone"> Teléfono</label>
-    <input
-      id="telephone"
-      type="tel"
-      class="js-phoneNumber"
-      placeholder="Ej: 555-55-55-55"
-    />
+    <input id="telephone" type="tel" class="js-phoneNumber" placeholder="Ej: 555-55-55-55" />
 
     <label for="linkedin"> Linkedin</label>
-    <input
-      id="linkedin"
-      type="text"
-      class="js-linkedin"
-      placeholder="Ej: linkedin.com/in/sally.hill"
-    />
+    <input id="linkedin" type="text" class="js-linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
 
     <label for="github"> Github</label>
-    <input
-      id="github"
-      type="text"
-      class="js-github"
-      placeholder="Ej: @sally-hill"
-    />
+    <input id="github" type="text" class="js-github" placeholder="Ej: @sally-hill" />
   </fieldset>
   <!--third form-->
   <div class="page__container__form__icon">
