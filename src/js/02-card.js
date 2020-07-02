@@ -73,7 +73,8 @@ const renderedUserGithub = document.querySelector('.js-github-result');
 function getInputValues() {
   userData.name = userNameElem.value;
   userData.job = userJobElem.value;
-  userData.tel = userPhoneNumberElem.value;
+  userData.photo = fr.result;
+  userData.phone = userPhoneNumberElem.value;
   userData.email = userEmailElem.value;
   userData.linkedin = userLinkedinElem.value;
   //   if (userGithubElem.value === "@") {
@@ -86,7 +87,7 @@ function getInputValues() {
 function renderUserInfo(obj) {
   renderedUserName.innerHTML = obj.name;
   renderedUserJob.innerHTML = obj.job;
-  renderedUserPhoneNumber.href = `tel:${obj.tel}`;
+  renderedUserPhoneNumber.href = `tel:${obj.phone}`;
   renderedUserEmail.href = `mailto:${obj.email}`;
   renderedUserLinkedin.href = obj.linkedin;
   renderedUserGithub.href = `https://github.com/${obj.github}`;
