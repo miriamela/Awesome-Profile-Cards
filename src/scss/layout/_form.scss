@@ -149,17 +149,6 @@
         color: $colorPrimaryDark;
         margin-top: 18px;
       }
-      button {
-        width: 140px;
-        height: 30px;
-        border-radius: 3px;
-        background-color: $colorSecondaryDark;
-        color: $colorLight;
-        font-family: $fontFamily;
-        font-size: 14px;
-        line-height: 20px;
-        margin-top: 10px;
-      }
 
       label,
       input {
@@ -251,10 +240,63 @@
   }
 }
 
+// AVATAR
+
 .hidden {
   display: none !important;
 }
 
 .rot {
   transform: rotate(0.5turn);
+}
+
+.action {
+  text-align: center;
+}
+.action__upload-btn {
+  width: 140px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: $colorSecondaryDark;
+  color: $colorLight;
+  font-family: $fontFamily;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+  darle los estilos que queremos */
+  display: none !important;
+}
+
+.container-preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.profile__image,
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+.profile__image {
+  width: 240px;
+  height: 205px;
+}
+
+.profile__preview {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
 }
