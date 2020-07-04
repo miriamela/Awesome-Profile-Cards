@@ -18,13 +18,33 @@ const cardObj = {
   icons: document.querySelectorAll('.js-socialMedia-icons'),
 };
 
+//SELECTORS...
+const userNameElem = document.querySelector('.js-userName');
+const userJobElem = document.querySelector('.js-userJob');
+const userPhoneNumberElem = document.querySelector('.js-phoneNumber');
+const userEmailElem = document.querySelector('.js-email');
+const userLinkedinElem = document.querySelector('.js-linkedin');
+const userGithubElem = document.querySelector('.js-github');
+const userData = { palette: 1 };
+const renderedUserName = document.querySelector('.js-userName-result');
+const renderedUserJob = document.querySelector('.js-userJob-result');
+const renderedUserPhoneNumber = document.querySelector('.js-phone-result');
+const renderedUserEmail = document.querySelector('.js-email-result');
+const renderedUserLinkedin = document.querySelector('.js-linkedin-result');
+const renderedUserGithub = document.querySelector('.js-github-result');
+const resetButton = document.querySelector('.js-reset-button');
+const form = document.querySelector('.js-form');
+
 //FUNCTIONS
 function changePalette(event) {
   //for every property name inside card object
+  userData.palette =
+    ['cold-', 'red-', 'mix-'].indexOf(event.currentTarget.colorPalette) + 1;
   for (const key in cardObj) {
     if (key === 'icons') {
       //for every property name inside icons object
       for (const item in cardObj[key]) {
+        if (item === 'length') break;
         //remove every class related to color
         cardObj[key][item].classList.remove(
           `cold-icon`,
@@ -54,23 +74,6 @@ mixPalette.addEventListener('click', changePalette);
 
 //DATA FORM
 
-//SELECTORS...
-const userNameElem = document.querySelector('.js-userName');
-const userJobElem = document.querySelector('.js-userJob');
-const userPhoneNumberElem = document.querySelector('.js-phoneNumber');
-const userEmailElem = document.querySelector('.js-email');
-const userLinkedinElem = document.querySelector('.js-linkedin');
-const userGithubElem = document.querySelector('.js-github');
-const userData = {};
-const renderedUserName = document.querySelector('.js-userName-result');
-const renderedUserJob = document.querySelector('.js-userJob-result');
-const renderedUserPhoneNumber = document.querySelector('.js-phone-result');
-const renderedUserEmail = document.querySelector('.js-email-result');
-const renderedUserLinkedin = document.querySelector('.js-linkedin-result');
-const renderedUserGithub = document.querySelector('.js-github-result');
-const resetButton = document.querySelector('.js-reset-button');
-const form = document.querySelector('.js-form');
-
 //FUNCTIONS...
 function getInputValues() {
   userData.name = userNameElem.value;
@@ -79,12 +82,12 @@ function getInputValues() {
   userData.phone = userPhoneNumberElem.value;
   userData.email = userEmailElem.value;
   userData.linkedin = userLinkedinElem.value;
-  //   if (userGithubElem.value === "@") {
-  //     userData.github = userGithubElem.value.splice(0, 1);
-  //   } else {
-  //     userData.github = userGithubElem.value;
-  //   }
-  userData.github = userGithubElem.value;
+  if (userGithubElem.value[0] === '@') {
+    userData.github = userGithubElem.value.substring(1);
+  } else {
+    userData.github = userGithubElem.value;
+  }
+  //   userData.github = userGithubElem.value;
 }
 function renderUserInfo(obj) {
   renderedUserName.innerHTML = obj.name;
@@ -107,12 +110,18 @@ function renderUserInfo(obj) {
 function updateInputHandler() {
   getInputValues();
   renderUserInfo(userData);
+  if (cardObj.name.innerHTML === '') cardObj.name.innerHTML = 'Nombre Apellido';
+  if (cardObj.job.innerHTML === '')
+    cardObj.job.innerHTML = 'Front-end Developer';
 }
 //   if (userGithubElem.value === "@") {
 
 function resetForm() {
   form.reset();
   updateInputHandler();
+  profileImage.style.backgroundImage = `url(https://via.placeholder.com/300x300/cccccc/666666/?text=IMAGE)`;
+  profilePreview.style.backgroundImage = '';
+  coldPalette.click();
 }
 
 //LISTENERS...

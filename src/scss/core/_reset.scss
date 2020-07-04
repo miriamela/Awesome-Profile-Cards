@@ -361,6 +361,9 @@ template {
   box-sizing: border-box;
   border-style: unset;
 }
+button {
+  outline: none;
+}
 
 .page {
   font-size: 16px;
