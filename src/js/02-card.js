@@ -112,7 +112,9 @@ function updateInputHandler() {
 
 function resetForm() {
   form.reset();
+  updateInputHandler();
 }
+
 //LISTENERS...
 userNameElem.addEventListener('keyup', updateInputHandler);
 userJobElem.addEventListener('keyup', updateInputHandler);
