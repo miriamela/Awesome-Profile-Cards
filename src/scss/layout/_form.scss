@@ -211,6 +211,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      & .url {
+        margin-top: 5px;
+        font-family: $fontFamily;
+        font-size: 12px;
+        color: $colorSecondaryDark;
+        text-align: center;
+      }
+
       & h4 {
         font-size: 18px;
         color: $colorFontCard;
@@ -220,7 +229,7 @@
         color: $colorSecondaryDark;
         margin-top: 5px;
       }
-      & button {
+      & .twitter-share-button {
         width: 181px;
         height: 30px;
         border-radius: 3px;
@@ -232,6 +241,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
         & .fab {
           font-size: 18px;
         }
