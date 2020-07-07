@@ -36,7 +36,10 @@
     <div class="page__container">
       <section class="page__container__card">
         <div class="page__container__card__reset">
-          <button class="page__container__card__reset__btn">
+          <button
+            type="reset"
+            class="page__container__card__reset__btn js-reset-button"
+          >
             <i class="far fa-trash-alt"></i> Reset
           </button>
         </div>
@@ -53,9 +56,12 @@
               Front-end Developer
             </p>
           </div>
-          <div class="page__container__card__box__imgContainer">
-            <img src="" alt="" />
-          </div>
+          <div
+            class="profile__image js__profile-image profile page__container__card__box__imgContainer"
+            style="
+              background-image: url(https://via.placeholder.com/300x300/cccccc/666666/?text=IMAGE);
+            "
+          ></div>
           <ul class="page__container__card__box__socialMedia js-socialMediaList">
             <li class="cold-icon js-socialMedia-icons">
               <a
@@ -101,7 +107,7 @@
         </div>
       </section>
 
-      <form class="page__container__form" action="#" method="GET">
+      <form class="page__container__form js-form" action="#" method="GET">
         <!--first form-->
         <div class="page__container__form__icon">
           <div class="page__container__form__icon__title">
@@ -162,6 +168,7 @@
             type="text"
             class="js-userName"
             placeholder="Ej: Sally Jill"
+            required
           />
 
           <label for="work"> Puesto</label>
@@ -170,16 +177,32 @@
             type="text"
             class="js-userJob"
             placeholder="Ej: Front-end unicorn"
+            required
           />
 
           <p>Imagen de perfil</p>
-          <button>Añadir imagen</button>
+          <div class="container-preview">
+            <div class="action">
+              <button class="action__upload-btn js__profile-trigger" type="button">
+                Añadir imagen
+              </button>
+              <input
+                type="file"
+                name=""
+                id="img-selector"
+                class="action__hiddenField js__profile-upload-btn"
+              />
+            </div>
+            <div class="profile__preview js__profile-preview"></div>
+          </div>
+
           <label for="email"> Email</label>
           <input
             id="email"
             type="email"
             class="js-email"
             placeholder="Ej: sally-hill@gmail.com"
+            required
           />
 
           <label for="telephone"> Teléfono</label>
@@ -188,6 +211,7 @@
             type="tel"
             class="js-phoneNumber"
             placeholder="Ej: 555-55-55-55"
+            required
           />
 
           <label for="linkedin"> Linkedin</label>

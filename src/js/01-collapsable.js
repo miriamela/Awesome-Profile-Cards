@@ -47,3 +47,4 @@ angleDownButton2.addEventListener('click', displayOrHideContent);
 angleDownButton3.addEventListener('click', displayOrHideContent);
 
 createButton.addEventListener('click', displayOrHideShareSection);
+createButton.addEventListener('click', sendData);
