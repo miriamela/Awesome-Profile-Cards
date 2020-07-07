@@ -49,4 +49,3 @@ function fakeFileClick() {
  */
 uploadBtn.addEventListener('click', fakeFileClick);
 fileField.addEventListener('change', getImage);
-profileImage.addEventListener('change', updateInputHandler);
