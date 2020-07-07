@@ -11,11 +11,7 @@ const angleDownButton3 = document.querySelector('.js-angleDown3');
 angleDownButton3.section = document.querySelector('.js-share');
 
 //VARS
-const sectionArr = [
-  angleDownButton1.section,
-  angleDownButton2.section,
-  angleDownButton3.section,
-];
+const sectionArr = [angleDownButton1, angleDownButton2, angleDownButton3];
 
 // eslint-disable-next-line no-unused-vars
 const createButton = document.querySelector('.create');
@@ -25,10 +21,11 @@ const shareSection = document.querySelector('.js-createText');
 
 function displayOrHideContent(event) {
   event.currentTarget.section.classList.toggle('hidden');
-  for (const sect of sectionArr) {
-    if (sect !== event.currentTarget.section) {
-      sect.classList.add('hidden');
-      if (sect === angleDownButton3.section) {
+  for (const arrowButton of sectionArr) {
+    if (arrowButton.section !== event.currentTarget.section) {
+      arrowButton.section.classList.add('hidden');
+      arrowButton.classList.remove('rot');
+      if (arrowButton.section === angleDownButton3.section) {
         shareSection.classList.add('hidden');
       }
     }
