@@ -25,7 +25,16 @@ const userPhoneNumberElem = document.querySelector('.js-phoneNumber');
 const userEmailElem = document.querySelector('.js-email');
 const userLinkedinElem = document.querySelector('.js-linkedin');
 const userGithubElem = document.querySelector('.js-github');
-let userData = { palette: 1, name: "", job: "", email:"", phone:0, linkedin:"", github:"", photo:"" };
+let userData = {
+  palette: 1,
+  name: '',
+  job: '',
+  email: '',
+  phone: 0,
+  linkedin: '',
+  github: '',
+  photo: '',
+};
 const renderedUserName = document.querySelector('.js-userName-result');
 const renderedUserJob = document.querySelector('.js-userJob-result');
 const renderedUserPhoneNumber = document.querySelector('.js-phone-result');
@@ -38,14 +47,14 @@ const userCardUrl = document.querySelector('.js-url');
 const twitterShare = document.querySelector('.twitter-share-button');
 const profileImageCard = document.querySelector('.js__profile-image');
 const profilePreviewCard = document.querySelector('.js__profile-preview');
-const fileInput = document.getElementById("img-selector");
+const fileInput = document.getElementById('img-selector');
 
 //FUNCTIONS
 function changePalette(event) {
   //for every property name inside card object
   userData.palette =
     ['cold-', 'red-', 'mix-'].indexOf(event.currentTarget.colorPalette) + 1;
-    localStorage.setItem('data', JSON.stringify(userData));
+  localStorage.setItem('data', JSON.stringify(userData));
   for (const key in cardObj) {
     if (key === 'icons') {
       //for every property name inside icons object
@@ -84,7 +93,7 @@ mixPalette.addEventListener('click', changePalette);
 function getInputValues() {
   userData.name = userNameElem.value;
   userData.job = userJobElem.value;
- userData.photo = fr.result;
+  userData.photo = fr.result;
   userData.phone = userPhoneNumberElem.value;
   userData.email = userEmailElem.value;
   userData.linkedin = userLinkedinElem.value;
@@ -95,7 +104,6 @@ function getInputValues() {
   }
   //   userData.github = userGithubElem.value;
 }
-
 
 function renderUserInfo(obj) {
   renderedUserName.innerHTML = obj.name;
@@ -129,7 +137,6 @@ function updateInputHandler() {
 //   if (localStorage.getItem("data") && localStorage.getItem("data")[param]) return localStorage.getItem("data")[param];
 // }
 
-
 function resetForm() {
   form.reset();
   updateInputHandler();
@@ -138,7 +145,8 @@ function resetForm() {
   coldPalette.click();
 }
 
-function sendData() {
+function sendData(event) {
+  event.preventDefault();
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     body: JSON.stringify(userData),
@@ -167,10 +175,9 @@ function showURL(result) {
   }
 }
 function setUserDataFromStorage() {
-  
-  if (localStorage.getItem("data")){
+  if (localStorage.getItem('data')) {
     const palettes = [coldPalette, hotPalette, mixPalette];
-    userData = JSON.parse(localStorage.getItem("data"));
+    userData = JSON.parse(localStorage.getItem('data'));
     palettes[userData.palette - 1].click();
     userNameElem.value = userData.name;
     userJobElem.value = userData.job;
@@ -181,7 +188,7 @@ function setUserDataFromStorage() {
     renderUserInfo(userData);
     profileImageCard.style.backgroundImage = `url(${userData.photo})`;
     profilePreviewCard.style.backgroundImage = `url(${userData.photo})`;
-    }
+  }
 }
 
 setUserDataFromStorage();
