@@ -3,12 +3,31 @@
     padding: 20px 40px;
   }
   &__card {
-    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    // background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
     padding: 38px 35px 40px 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid $colorLight;
+    border-radius: 25px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      z-index: -1;
+      background: url('../images/zodiac.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation-name: rotZodiac;
+      animation-duration: 80s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
 
     @include tablet {
       width: 100%;
@@ -39,7 +58,7 @@
 
     &__box {
       background-color: $colorLight;
-      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2),
+      box-shadow: 0 1px 10px 3px rgba(0, 0, 0, 0.6),
         0 1px 3px 0 rgba(0, 0, 0, 0.35);
       width: 240px;
       height: 329px;
@@ -131,4 +150,13 @@
   border-left: 5px solid #eab052;
   padding-left: 20px;
   margin-bottom: 10px;
+}
+
+@keyframes rotZodiac {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

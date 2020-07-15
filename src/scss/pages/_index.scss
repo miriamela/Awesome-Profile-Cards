@@ -1,6 +1,12 @@
 .page {
   &__box {
-    background-color: $colorBackgroundIndex;
+    background: rgb(158, 191, 255);
+    background: radial-gradient(
+      circle,
+      rgba(158, 191, 255, 1) 0%,
+      rgba(35, 102, 235, 1) 100%
+    );
+    // background-color: $colorBackgroundIndex;
     display: flex;
     flex-direction: column;
     align-items: center;

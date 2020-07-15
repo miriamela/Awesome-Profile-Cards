@@ -1,10 +1,18 @@
 .page__container {
   min-height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    $colorBackgroundIndex,
-    $colorLight
-  );
+  //   background-image: linear-gradient(
+  //     to bottom,
+  //     $colorBackgroundIndex,
+  //     $colorLight
+  //   );
+}
+.page2 {
+  background: rgb(158, 191, 255) !important;
+  background: radial-gradient(
+    circle,
+    rgba(158, 191, 255, 1) 0%,
+    rgba(35, 102, 235, 1) 100%
+  ) !important;
 }
 @include tablet {
   .page__container {

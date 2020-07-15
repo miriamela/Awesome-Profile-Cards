@@ -5,10 +5,14 @@
 //SELECTORS...
 const coldPalette = document.querySelector('.cold-palette');
 coldPalette.colorPalette = 'cold-';
+coldPalette.photo = 'url(./assets/images/esperanza.jpg)';
 const hotPalette = document.querySelector('.hot-palette');
 hotPalette.colorPalette = 'red-';
+hotPalette.photo =
+  'url(https://ep02.epimg.net/elpais/imagenes/2018/12/28/gente/1546003359_734416_1546003608_noticia_fotograma.jpg)';
 const mixPalette = document.querySelector('.mix-palette');
 mixPalette.colorPalette = 'mix-';
+mixPalette.photo = 'url(./assets/images/esperanza-mix.png)';
 
 const cardObj = {
   //dont modify the property names !important
@@ -54,6 +58,12 @@ function changePalette(event) {
   //for every property name inside card object
   userData.palette =
     ['cold-', 'red-', 'mix-'].indexOf(event.currentTarget.colorPalette) + 1;
+  if (userData.photo.search('data:image') !== 0) {
+    profileImage.style.backgroundImage = `${event.currentTarget.photo}`;
+  }
+  if (userData.photo === '' || !userData.photo) {
+    userData.photo = `${event.currentTarget.photo}`;
+  }
   localStorage.setItem('data', JSON.stringify(userData));
   for (const key in cardObj) {
     if (key === 'icons') {
@@ -93,7 +103,7 @@ mixPalette.addEventListener('click', changePalette);
 function getInputValues() {
   userData.name = userNameElem.value;
   userData.job = userJobElem.value;
-  userData.photo = fr.result;
+  userData.photo = fr.result ? fr.result : 'url(./assets/images/esperanza.jpg)';
   userData.phone = userPhoneNumberElem.value;
   userData.email = userEmailElem.value;
   userData.linkedin = userLinkedinElem.value;
@@ -140,7 +150,7 @@ function updateInputHandler() {
 function resetForm() {
   form.reset();
   updateInputHandler();
-  profileImage.style.backgroundImage = `url(https://via.placeholder.com/300x300/cccccc/666666/?text=IMAGE)`;
+  profileImage.style.backgroundImage = `url(../images/esperanza.jpg)`;
   profilePreview.style.backgroundImage = '';
   coldPalette.click();
 }

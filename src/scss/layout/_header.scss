@@ -1,11 +1,11 @@
 .page {
   &__header {
-    background-color: $colorLight;
     height: 110px;
     display: flex;
     flex: row;
     justify-content: flex-start;
     align-items: center;
+    border-bottom: 1px solid $colorLight;
     &__logo {
       padding: 0 40px;
       img {
